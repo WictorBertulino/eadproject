@@ -4,15 +4,84 @@
 {% load static %}
 
 {% block content %}
-<div class="pure-g-r content-ribbon">
+
+
+<section class="banner-area">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-12 banner-right">
+          <h1 class="text-white">
+            Cursos
+          </h1>
+          <p class="mx-auto text-white  mt-20 mb-40">
+
+          </p>
+          <div class="link-nav">
+            <span class="box">
+              <a href="index.html">Início </a>
+              <i class="lnr lnr-arrow-right"></i>
+              <a href="courses.html">Cursos</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="popular-course-area section-gap">
+    <div class="container-fluid">
+      <div class="row justify-content-center section-title">
+        <div class="col-lg-12">
+          <h2>
+            LISTAGEM DE CURSOS DO YOULEARN
+
+          </h2>
+          <p>
+            Abaixo a lista de cursos disponíveis na plataforma
+
+          </p>
+        </div>
+      </div>
+      <div class="owl-carousel popuar-course-carusel">
+
+        {% for course in courses %}
+        <div class="single-popular-course">
+          <div class="thumb">
+            {% if course.imagem %}
+            <img src="{{ course.imagem.url }}" alt="{{ course.name }}">
+        {% else %}
+            <!-- <img src="{% static 'img/course-image.png' %}"> -->
+        </a>
+        {% endif %}
+          </div>
+          <div class="details">
+            <div class="d-flex justify-content-between mb-20">
+              <!-- <p class="name">Investimento</p>
+              <p class="value">R$ 150,00</p> -->
+            </div>
+            <a href="{% url 'courses:detalhe' course.slug %}">
+              <h4>{{ course.name }}</h4>
+            </a>
+            <div class="bottom d-flex mt-15">
+              
+              <p class="ml-20">{{ course.description|linebreaks }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+ 
+      </div>
+    </div>
+  </section>
+
+<!-- <div class="pure-g-r content-ribbon">
     <div class="pure-u-1">
         <div class="l-box">
             <h4 class="content-subhead">Listagem de Cursos do YouLearn</h4>
             <p>Abaixo a lista de cursos disponíveis na plataforma</p>
         </div>
     </div>
-</div>
-{% for course in courses %}
+</div> -->
+<!-- {% for course in courses %}
 <div class="pure-g-r content-ribbon">
     <div class="pure-u-1-3">
         <div class="l-box">
@@ -40,5 +109,5 @@
         </div>
     </div>
 </div>
-{% endfor %}
+{% endfor %} -->
 {% endblock %}

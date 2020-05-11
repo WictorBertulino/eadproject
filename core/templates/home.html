@@ -1,91 +1,90 @@
 {% extends 'base.html' %}
 {% block title %} Cursos e Webinars {% endblock title %}
+{% load static %}
+
 {% block content %}
-    <div class="splash">
-        <div class="pure-g-r">
-            <div class="pure-u-1">
-                <div class="l-box splash-text">
-                    <h1 class="splash-head">
-                        Aprenda e cresça profissionalmente
-                    </h1>
-                    <h2 class="splash-subhead">
-                        Somos a maior plataforma de conhecimento. Encontre cursos, webinars, workshops. Participe de Hackathons de empresas e tenha a possibilidade de ser contratado.
-                    </h2>
-                    <p>
-                        <a href="#" class="pure-button primary-button">Saiba mais</a>
-                    </p>
-                </div>
-            </div>
+<section class="home-banner-area">
+    <div class="container">
+      <div class="row justify-content-center fullscreen align-items-center">
+        <div class="col-lg-5 col-md-8 home-banner-left">
+          <h1 class="text-white">
+            Aprenda e cresça profissionalmente
+
+          </h1>
+          <p class="mx-auto text-white  mt-20 mb-40">
+            Somos a maior plataforma de conhecimento. Encontre cursos, webinars, workshops. Participe de Hackathons de empresas e tenha a possibilidade de ser contratado.
+          </p>
         </div>
+        <div class="offset-lg-2 col-lg-5 col-md-12 home-banner-right">
+          <img class="img-fluid" src="{% static 'template/img/header-img.png'%}" alt="" />
+        </div>
+      </div>
     </div>
-    <div class="content">
-        <div class="pure-g-r content-ribbon">
-            <div class="pure-u-2-3">
-                <div class="l-box">
-                    <h4 class="content-subhead">Vídeo-aulas e materiais digitais</h4>
-                    <h3>Publique suas aulas</h3>
-                    <p>
-                        O Simple MOOC tem um sistema simples e prático para que o professor disponibilize vídeo-aulas e materiais digitais como: pdf's, slides, imagens ...
-                    </p>
-                </div>
-            </div>
-            <div class="pure-u-1-3">
-                <div class="l-box">
-                    <img src="http://placehold.it/400x250"
-                         alt="Vídeo aulas e materiais digitais.">
-                </div>
-            </div>
+  </section>
+ 
+  <section class="other-feature-area">
+    <div class="container">
+      <div class="feature-inner row">
+        <div class="col-lg-12">
+          <div class="section-title text-left">
+           
+           
+          </div>
         </div>
-        <div class="pure-g-r content-ribbon">
-            <div class="pure-u-1-3">
-                <div class="l-box">
-                    <img src="http://placehold.it/400x250"
-                         alt="Fórum de Dúvidas">
-                </div>
+        <div class="col-lg-4 col-md-6 mt--260">
+          <div class="other-feature-item">
+            <i class="ti-video-camera"></i>
+            <h4>VÍDEO-AULAS E MATERIAIS DIGITAIS
+            </h4>
+            <div>
+              <p>
+              <h5></h5>  Publique suas aulas
+O Simple MOOC tem um sistema simples e prático para que o professor disponibilize vídeo-aulas e materiais digitais como: pdf's, slides, imagens ...
+              </p>
             </div>
-            <div class="pure-u-2-3">
-                <div class="l-box">
-                    <h4 class="content-subhead">Fórum de Dúvidas</h4>
-                    <h3>Interaja com seus Alunos</h3>
-                    <p>
-                        No Simple MOOC você pode ter seu próprio sistema de fórum para que seus alunos possam interagir com você e com os outros alunos
-                    </p>
-                </div>
-            </div>
+          </div>
         </div>
-        <div class="pure-g-r content-ribbon">
-            <div class="pure-u-2-3">
-                <div class="l-box">
-                    <h4 class="content-subhead">Exercícios</h4>
-                    <h3>Crie exercícios para avaliar seus alunos</h3>
-                    <p>
-                        Você pode criar exercícios para que os alunos possam ser avaliados e todo o controle de notas e resolução dos exercícios é controlado pela plataforma, facilitando sua vida
-                    </p>
-                </div>
+        <div class="col-lg-4 col-md-6 mt--160">
+          <div class="other-feature-item">
+            <i class="ti-comment-alt"></i>
+            <h4>FÓRUM DE DÚVIDAS
+              </h4>
+            <div>
+              <p>
+                Interaja com seus Alunos
+                No Simple MOOC você pode ter seu próprio sistema de fórum para que seus alunos possam interagir com você e com os outros alunos
+              </p>
             </div>
-            <div class="pure-u-1-3">
-                <div class="l-box">
-                    <img src="http://placehold.it/400x250"
-                         alt="Exercícios">
-                </div>
-            </div>
+          </div>
         </div>
-        <div class="pure-g-r content-ribbon">
-            <div class="pure-u-1-3">
-                <div class="l-box">
-                    <img src="http://placehold.it/400x250"
-                         alt="Mural de Avisos">
-                </div>
+        <div class="col-lg-4 col-md-6 ">
+          <div class="other-feature-item">
+            <i class="ti-marker-alt"></i>
+            <h4>EXERCÍCIOS</h4>
+            <div>
+              <p>
+                Crie exercícios para avaliar seus alunos
+Você pode criar exercícios para que os alunos possam ser avaliados e todo o controle de notas e resolução dos exercícios é controlado pela plataforma, facilitando sua vida
+              </p>
             </div>
-            <div class="pure-u-2-3">
-                <div class="l-box">
-                    <h4 class="content-subhead">Mural de Avisos</h4>
-                    <h3>Envie anúncios diretamente para os alunos</h3>
-                    <p>
-                        Organize os avisos do seu curso de forma fácil e simples.
-                    </p>
-                </div>
-            </div>
+          </div>
         </div>
+     
+        <div class="col-lg-4 col-md-6 mt--260">
+          <div class="other-feature-item">
+            <i class="ti-pin-alt"></i>
+            <h4>MURAL DE AVISOS
+            </h4>
+            <div>
+              <p>
+                Envie anúncios diretamente para os alunos
+                Organize os avisos do seu curso de forma fácil e simples.
+              </p>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
     </div>
+  </section>
 {% endblock content %}
