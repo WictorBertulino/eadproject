@@ -6,28 +6,30 @@
 <section class="banner-area">
     <div class="container">
       <div class="row justify-content-center align-items-center">
-        <div class="col-lg-12 banner-right">
-          <form action="" class="pure-form pure-form-aligned" method="post">
+        <div class="col-lg-12">
+
+          <form action="" class="formLogin" method="post">
+
             {% csrf_token %}
             <fieldset>
                 {{ form.non_field_errors }}
 
                 {% for field in form %}
-                <div class="pure-control-group">
                     {{ field.label_tag }}
                     {{ field }}
-                    {{ field.errors }}
-                </div>
+                    {{ field.errors }}  
+             
                 {% endfor %}
-                <div class="pure-controls">
-                    <button type="submit" class="genric-btn success circle">Entrar</button>
-                </div>
+                
+                    <button type="submit" class="genric-btn success circle st">Entrar</button>
+                    <div class="cs">
+                        Não é cadastrado? <a  href="/conta/cadastrar/" title="">Cadastre-se</a><br>
+                        Esqueceu a senha? <a href="/conta/password_reset">Nova Senha</a><br>
+                    </div>
+                
             </fieldset>
-            <br>
-            <p>
-                Não é cadastrado? <a  href="/conta/cadastrar/" title="">Cadastre-se</a><br>
-                Esqueceu a senha? <a href="/conta/password_reset">Nova Senha</a><br>
-            </p>
+           
+         
         </form>
           </div>
         </div>
